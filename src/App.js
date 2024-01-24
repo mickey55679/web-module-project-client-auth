@@ -1,4 +1,3 @@
-// App.js
 import React from "react";
 import "./App.css";
 import {
@@ -17,30 +16,37 @@ import PrivateRoute from "./components/PrivateRoute";
 function App() {
   return (
     <Router>
-        <div className="App">
-          <header>
-            <h2>Friends Database</h2>
-            <Link className="link" to="login">
-              Login
-            </Link>
-            <Link className="link" to="friends">
-              Friends List
-            </Link>
-            <Link className="link" to="friends/add">
-              Add Friends
-            </Link>
-            <Link className="link" to="logout">
-              Logout
-            </Link>
-          </header>
-          <Routes>
-            <Route path="/" element={<Login />} />
-            <Route path="/login" element={<Navigate to="/" />} />
-            <PrivateRoute path="/friends" element={<FriendsList />} />
-            <Route path="/friends/add" element={<AddFriend />} />
-            <Route path="/logout" element={<Logout />} />
-          </Routes>
-        </div>
+      <div className="App">
+        <header>
+          <h2>Friends Database</h2>
+          <Link className="link" to="login">
+            Login
+          </Link>
+          <Link className="link" to="friends">
+            Friends List
+          </Link>
+          <Link className="link" to="friends/add">
+            Add Friends
+          </Link>
+          <Link className="link" to="logout">
+            Logout
+          </Link>
+        </header>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/login" element={<Navigate to="/" />} />
+          <Route
+            path="/friends"
+            element={
+              <PrivateRoute>
+                <FriendsList />
+              </PrivateRoute>
+            }
+          />
+          <Route path="/friends/add" element={<AddFriend />} />
+          <Route path="/logout" element={<Logout />} />
+        </Routes>
+      </div>
     </Router>
   );
 }

@@ -1,10 +1,9 @@
-// PrivateRoute.js
 import React from "react";
-import { Route, Navigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 
-const PrivateRoute = ({ path, element }) => {
+const PrivateRoute = ({ children }) => {
   return localStorage.getItem("token") ? (
-    <Route path={path} element={element} />
+    children
   ) : (
     <Navigate to="/login" replace />
   );
