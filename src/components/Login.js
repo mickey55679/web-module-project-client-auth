@@ -20,7 +20,6 @@ const Login = () => {
       axios.post('http://localhost:9000/api/login', cred)
       .then(resp => {
         const token = resp.data.token
-        console.log(token)
         localStorage.setItem("token", token);
         navigate('/friends')
         
