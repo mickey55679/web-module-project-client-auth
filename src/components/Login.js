@@ -17,10 +17,13 @@ const Login = () => {
     
     const handleSubmit = (e) => {
       e.preventDefault();
-      axios.post('http://localhost:9000/api/login', cred )
+      axios.post('http://localhost:9000/api/login', cred)
       .then(resp => {
-        localStorage.setItem("token", resp.data.payload);
+        const token = resp.data.token
+        console.log(token)
+        localStorage.setItem("token", token);
         navigate('/friends')
+        
 
       })
       .catch(err => {

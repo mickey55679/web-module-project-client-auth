@@ -1,21 +1,34 @@
-import React from "react";
+import React, {useState} from "react";
 
 const AddFriend = () => {
+  const [form, setForm] = useState({
+    name: '',
+    age:'',
+    email: ''
+  })
+
+  const handleChange = (e) => {
+    setForm({
+      ...form,
+      [e.target.name]:e.target.value
+    })
+  }
+  console.log(form)
   return (
     <div>
       <h2>Add Friend</h2>
       <form>
         <div>
-          <label htmlFor="username">Username:</label>
-          <input id="username" />
+          <label htmlFor="name">Name:</label>
+          <input name="name" id="name" />
         </div>
         <div>
           <label htmlFor="age">Age:</label>
-          <input id="age" />
+          <input name='age' id="age" />
         </div>
         <div>
           <label htmlFor="email">Email:</label>
-          <input id="email" />
+          <input name='email' id="email" />
         </div>
         <button>Submit</button>
       </form>
