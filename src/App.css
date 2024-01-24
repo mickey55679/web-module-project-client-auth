@@ -52,3 +52,8 @@
   transform: scale(1.1);
    font-size: 1.2em; 
 }
+.friend-item {
+  margin: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+}

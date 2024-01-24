@@ -24,18 +24,21 @@ const FriendsList = () => {
 
   }, [])
 
-  return (
-    <div>
-      <h2>FriendsList</h2>
-      <ul>
-        {
-        friends.map(friend => {
-          return <li>{friend.name} - {friend.age} - {friend.email}</li>
-        })
-        }
-      
-      </ul>
-    </div>
-  );
-};
+ return (
+   <div>
+     <h2>FriendsList</h2>
+     <ul>
+       {friends.map((friend, index) => (
+         <li
+           key={index}
+           style={{ margin: "10px", padding: "5px", border: "1px solid #ccc" }}
+         >
+           {friend.name} - {friend.age} - {friend.email}
+         </li>
+       ))}
+     </ul>
+   </div>
+ );
+
+      }
 export default FriendsList
