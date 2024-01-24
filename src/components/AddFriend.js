@@ -37,15 +37,30 @@ const AddFriend = () => {
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="name">Name:</label>
-          <input onChange={handleChange} name="name" id="name" />
+          <input
+            onChange={handleChange}
+            name="name"
+            id="name"
+            placeholder="Enter Name"
+          />
         </div>
         <div>
           <label htmlFor="age">Age:</label>
-          <input onChange={handleChange} name="age" id="age" />
+          <input
+            onChange={handleChange}
+            name="age"
+            id="age"
+            placeholder="Enter Age"
+          />
         </div>
         <div>
           <label htmlFor="email">Email:</label>
-          <input onChange={handleChange} name="email" id="email" />
+          <input
+            onChange={handleChange}
+            name="email"
+            id="email"
+            placeholder="Enter email"
+          />
         </div>
         <button>Submit</button>
       </form>
