@@ -43,8 +43,22 @@ function App() {
               </PrivateRoute>
             }
           />
-          <Route path="/friends/add" element={<AddFriend />} />
-          <Route path="/logout" element={<Logout />} />
+          <Route
+            path="/friends/add"
+            element={
+              <PrivateRoute>
+                <AddFriend />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/logout"
+            element={
+              <PrivateRoute>
+                <Logout />
+              </PrivateRoute>
+            }
+          />
         </Routes>
       </div>
     </Router>
