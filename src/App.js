@@ -8,15 +8,28 @@ import {
 } from "react-router-dom";
 
 const Login = () => {
-  return <h2>Login</h2>;
+  return (
+    <div>
+      <h2>Login</h2>
+    </div>
+  );
+
 };
 
 const FriendsList = () => {
-  return <h2>FriendList</h2>;
+ return (
+   <div>
+     <h2>Login</h2>
+   </div>
+ );
 };
 
 const AddFriend = () => {
-  return <h2>AddFriend</h2>;
+   return (
+     <div>
+       <h2>Login</h2>
+     </div>
+   );
 };
 
 function App() {
