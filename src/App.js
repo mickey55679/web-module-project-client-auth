@@ -10,6 +10,7 @@ import {
 import Login from "./components/Login";
 import FriendsList from "./components/FriendsList";
 import AddFriend from "./components/AddFriend";
+import Logout from "./components/Logout";
 
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
           <h2>Friends Database</h2>
           <Link className="link" to="login">
             Login
-          </Link> 
+          </Link>
           <Link className="link" to="friends">
             Friends List
           </Link>
@@ -36,6 +37,7 @@ function App() {
           <Route path="/login" element={<Navigate to="/" />} />
           <Route path="/friends" element={<FriendsList />} />
           <Route path="/friends/add" element={<AddFriend />} />
+          <Route path="/logout" element={<Logout/>} />
         </Routes>
       </div>
     </Router>
