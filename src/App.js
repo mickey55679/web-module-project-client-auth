@@ -17,7 +17,6 @@ import PrivateRoute from "./components/PrivateRoute";
 function App() {
   return (
     <Router>
-      <React.Fragment>
         <div className="App">
           <header>
             <h2>Friends Database</h2>
@@ -42,7 +41,6 @@ function App() {
             <Route path="/logout" element={<Logout />} />
           </Routes>
         </div>
-      </React.Fragment>
     </Router>
   );
 }
